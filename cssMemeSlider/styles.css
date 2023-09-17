@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
+    padding: 2em;
+}
+
+.wrapper-sreen {
+    max-width: 46em;
+    position: relative;
+    overflow: hidden;
+}
+
+.sliders .images {
+    display: flex;
+    width: 100%;
+}
+
+.sliders img {
+    max-width: 100%;
+    width: 46em;
+    transition: all 0.15s ease;
+    box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+
+.sliders input {
+    display: none;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: end;
+    margin: 5px;
+    align-items: center;
+}
+
+.pagination-container label {
+    cursor: pointer;
+}
+
+.pagination-container .dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid gray 3px;
+    display: inline-block;
+    transition: all 0.15s ease;
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.pagination-container label:hover .dot {
+    background-color: white;
+    transition: background-color 0.8s ease;
+}
+
+.pagination-container label:active .dot {
+    border-color: white;
+}
+
+#mem1:checked~.images img:nth-child(1) {
+    margin-left: 0;
+}
+
+#mem2:checked~.images img:nth-child(2) {
+    margin-left: -100%;
+}
+
+#mem3:checked~.images img:nth-child(3) {
+    margin-left: -200%;
+}
+
+#mem4:checked~.images img:nth-child(4) {
+    margin-left: -300%;
+}
+
+#mem1:checked~.flex-row .text:nth-child(1) {
+    margin-left: 0;
+}
+
+#mem2:checked~.flex-row .text:nth-child(2) {
+    margin-left: -100%;
+}
+
+#mem3:checked~.flex-row .text:nth-child(3) {
+    margin-left: -200%;
+}
+
+#mem4:checked~.flex-row .text:nth-child(4) {
+    margin-left: -300%;
+}
+
+#mem1:checked~.flex-row label:nth-child(1) .dot,
+#mem2:checked~.flex-row label:nth-child(2) .dot,
+#mem3:checked~.flex-row label:nth-child(3) .dot,
+#mem4:checked~.flex-row label:nth-child(4) .dot {
+    background-color: white;
+}
+
+
+.text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f2f2f2;
+    font-size: 1.1rem;
+    padding: 1rem 0.8rem 1rem 0;
+    width: 100%;
+    text-align: left;
+    min-width: 100%;
+    background-color: dimgray;
+    transition: all 0.2s ease;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.text-container {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+@media (max-width: 500px) {
+
+    .flex-row {
+        display: block;
+        padding-top: 1rem;
+    }
+
+    body {
+        padding: 1em 2em;
+    }
+
+    .pagination-container {
+        justify-content: center;
+    }
+}
