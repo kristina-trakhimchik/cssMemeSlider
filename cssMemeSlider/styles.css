@@ -182,4 +182,19 @@ body {
     background-color: transparent;
 }
 
+@media (max-width: 500px) {
 
+    .flex-row {
+        display: block;      
+        padding-top: 1rem;
+    }
+
+    body {
+    padding: 1em 2em;
+    }
+
+    .pagination-container {
+        justify-content: center;
+    }
+
+}
