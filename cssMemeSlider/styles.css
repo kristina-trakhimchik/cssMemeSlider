@@ -98,3 +98,51 @@ body {
 }
 
 
+.text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f2f2f2;
+    font-size: 1.1rem;
+    padding: 1rem 0.8rem 1rem 0;
+    width: 100%;
+    text-align: left;
+    /* opacity: 1; */
+    min-width: 100%;
+    background-color: dimgray;
+    
+
+    transition: all 0.2s ease;
+    /* animation: anime 0.7s ease-in-out; */
+    /* animation: typing 2s steps(18), cursor 0.4s step-end infinite alternate; */
+}
+
+/* @keyframes anime {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+  } */
+
+  
+.flex-row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.text-container {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+
