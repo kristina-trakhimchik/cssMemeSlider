@@ -11,39 +11,47 @@
 
 <body>
     <div class="wrapper-sreen">
-        <input type="radio" name="slider" id="m1" checked>
-        <input type="radio" name="slider" id="m2">
-        <input type="radio" name="slider" id="m3">
-        <input type="radio" name="slider" id="m4"> 
+        <div class="sliders">
 
-        <div class="mem1 show">
-            <img src="./assets/mem1.jpg" alt="mem1">
-            <span class="text">Mem 1</span>
-        </div>
-        <div class="mem2 show">
-            <img src="./assets/mem2.jpeg" alt="mem2">
-            <span class="text">Mem 2</span>
-        </div>
-        <div class="mem3 show">
-            <img src="./assets/mem3.jpg" alt="mem3">
-            <span class="text">Mem 3</span>
-        </div>
-        <div class="mem4 show">
-            <img src="./assets/mem4.jpg" alt="mem4">
-            <span class="text">Mem 4</span>
+            <input type="radio" name="slider" id="mem1" checked>
+            <input type="radio" name="slider" id="mem2">
+            <input type="radio" name="slider" id="mem3">
+            <input type="radio" name="slider" id="mem4">
+
+            <div class="images">
+                <img class="mem-1 show" src="./assets/mem1.jpg" alt="mem1">
+                <img class="mem-2 show" src="./assets/mem2.jpeg" alt="mem2">
+                <img class="mem-3 show" src="./assets/mem3.jpg" alt="mem3">
+                <img class="mem-4 show" src="./assets/mem4.jpeg" alt="mem4">
+            </div>
+
+            <div class="flex-row">
+                
+                <div class="pagination-container">
+                    <label for="mem1">
+                        <span class="dot"></span>
+                    </label>
+                    <label for="mem2">
+                        <span class="dot"></span>
+                    </label>
+                    <label for="mem3">
+                        <span class="dot"></span>
+                    </label>
+                    <label for="mem4">
+                        <span class="dot"></span>
+                    </label>
+                </div>
+
+                <div class="text-container">
+                    <p class="text mem-1">Когда скопировал в точности такой же код...</p>
+                    <p class="text mem-2">Ты ж программист!</p>
+                    <p class="text mem-3">Но это же так очевидно!</p>
+                    <p class="text mem-4">Я в любое время могу починить ваш компьютер!</p>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <div class="pagination-container" style="text-align:center">
-        <label for="m1" class="dot"></label>
-        <label for="m2" class="dot"></label>
-        <label for="m3" class="dot"></label>
-        <label for="m4" class="dot"></label>
-    </div>
-
-    <!-- <div class="text-container">
-
-    </div> -->
 </body>
 
 </html>

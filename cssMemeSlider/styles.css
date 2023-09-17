@@ -1,67 +1,100 @@
 * {
+    box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    border: none;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
 }
 
 body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: dimgray;
+    padding: 2em;
 }
 
 .wrapper-sreen {
-    max-width: 1000px;
+    max-width: 46em;
     position: relative;
-    margin: auto;
+    overflow: hidden;
 }
 
-.mem {
+.sliders .images {
+    display: flex;
+    width: 100%;
+}
+
+.sliders img {
+
+    max-width: 100%;
+    width: 46em;
+    transition: all 0.15s ease;
+    box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    /* animation-name: show;
+    animation-duration: 1.5s; */
+}
+
+
+.sliders input {
     display: none;
 }
 
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    left: 15px;
-    width: 100%;
-    text-align: left;
+.pagination-container {
+    display: flex;
+    justify-content: end;
+    margin: 5px;
+    align-items: center;
 }
-
-.dot {
+.pagination-container label {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
+}
+
+.pagination-container .dot {
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
+    border: solid gray 3px;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: all 0.15s ease;
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
-.active,
-.dot:hover {
-    background-color: pink;
+.pagination-container label:hover .dot {
+    background-color: white;
+    transition: background-color 0.8s ease;
 }
 
-.show {
-    animation-name: show;
-    animation-duration: 1.5s;
+.pagination-container label:active .dot {
+    border-color: white;
 }
 
-@keyframes show {
-    from {
-        opacity: .4
-    }
 
-    to {
-        opacity: 1
-    }
+
+#mem1:checked ~ .images img:nth-child(1) {
+    margin-left: 0;
 }
+
+#mem2:checked ~ .images img:nth-child(2) {
+    margin-left: -100%;
+}
+
+#mem3:checked ~ .images img:nth-child(3) {
+    margin-left: -200%;
+}
+
+#mem4:checked ~ .images img:nth-child(4) {
+    margin-left: -300%;
+}
+
+
+
+#mem1:checked ~ .flex-row label:nth-child(1) .dot,
+#mem2:checked ~ .flex-row label:nth-child(2) .dot,
+#mem3:checked ~ .flex-row label:nth-child(3) .dot,
+#mem4:checked ~ .flex-row label:nth-child(4) .dot {
+    background-color: white;
+}
+
+
